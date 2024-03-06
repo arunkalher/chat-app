@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&&family=Roboto+Slab:wght@100..900&family=Audiowide&family=Sofia&display=swap&family=Bad+Script&family=Madimi+One&family=Marck+Script&family=Reenie+Beanie&family=Roboto+Slab:wght@100..900&family=Sofia&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ 
+    <section id="theme-icon">
+        <div id="ball"></div>
+    </section>
+    <section id="chatbox">
+        <h1 id="chatbox-1-h1">Chat App</h1>
+        <section id="user-wrap">
+            <label id="user-name" for="user">Username</label>
+        <input type="text" id="user">
+        </section>
+        <section id="room-wrap">
+        <label id="room-name" for="room">Room</label>
+         <!-- <select type="option" id="room">
+        <option value="value1" id="value1" class="rooms">Room1</option>
+        <option value="value2" id="value2" class="rooms">Room2</option>
+        <option value="value3" id="value3" class="rooms">Room3</option>
+        <option value="value4" id="value4" class="rooms">Room4</option>
+
+    </select>  -->
+
+     <section id="room">
+        <section id="room-wrap-1">
+        <section id="room0">Room 1</section>
+        <section id="down">▼</section>
+        </section>
+        <section class="room-down" id="room1">Room 1</section>
+        <section class="room-down" id="room2">Room 2</section>
+        <section class="room-down" id="room3">Room 3</section>
+        <section class="room-down" id="room4">Room 4</section>
+    </section>
+        </section>
+        <button id="join">Join Chat</button>
+        <section id="error-msg">Error</section>
+    </section> 
+  
+  
+    <section id="chatbox-2">
+
+        <section id="chatbox-2-wrap">
+        <h1 id="chatbox-2-h1">Chat App</h1>
+        <h2 id="chatbox-2-h2">Welcome Arun</h2>
+        <div id="wrappe">
+            <section id="room-info">Room 1</section>
+        <button id="leave">Leave Chat</button>
+        </div>
+        <section id="users-msg-wrap">
+            <section id="users">
+                <!-- <div class="user">User First</div>
+                <hr> -->
+                
+            </section>
+            <section id="messages">
+                <!-- <section class="msg-wrap">
+                <section class="message">
+            
+                    <div class="msg-name">name:</div>
+                    <div class="msg-text">Hello what are u doinhg</div>
+                </section>
+                </section>
+    
+                <section class="msg-wrap-me">
+                    <section class="message">
+                
+                        <div class="msg-name">name:</div>
+                        <div class="msg-text">Hello what are u doinhg</div>
+                    </section>
+                </section>
+                <section class="msg-wrap-me">
+                    <section class="message">
+                
+                        <div class="msg-name">name:</div>
+                        <div class="msg-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perferendis magni eos molestiae? At, ipsam. Beatae ipsum ducimus molestias similique.</div>
+                    </section>
+                </section> -->
+            </section>
+            <section id="send-msg-wrap">
+                <input type="text" name="msg" id="msg">
+                <img src="./images//send.png" id="send-ico" alt="">
+            </section>
+        </section>
+        <div id="wrappe-2">
+            <section id="users-info">Online 5</section>
+        <button id="show-users">Show</button>
+        </div>
+        </section>
+    </section>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="index.js" type="module"></script>
+</html>
