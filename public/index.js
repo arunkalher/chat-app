@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let setTime=null
     const changeTheme = () => {
 
-        console.log("change theme")
+       
+        
         theme = !theme
 
         if (theme) {
@@ -107,7 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
         addUser(user)
     }
     const removeError=(ele)=>{
-        console.log(ele)
+      
+        
         ele.style.display="none"
         setTime=null
     }
@@ -137,7 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         if(setTime)
         {
-        console.log("cleared")
+      
+            
             clearTimeout(setTime)
             setTime=null
         }
@@ -164,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
         socket.on("message",Msg=>{
             const {userName,msg,
                 time}=Msg
-            console.log(Msg)
-                console.log(userName,time)
+         
+                
             addMessage(userName,time,msg)
             updateScroll()
         })
@@ -176,10 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
             socket.disconnect()
             document.getElementById("chatbox").style.display="block"
             document.getElementById("chatbox-2").style.display="none"
-            console.log("exist")
+          
+            
             if(setTime)
             {
-            console.log("cleared")
+          
+                
                 clearTimeout(setTime)
                 setTime=null
             }
@@ -231,12 +236,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sendMessage=()=>{
         const msg=document.getElementById("msg").value
-        console.log("m",msg)
+      
+        
         if(msg=="")
         return
         addMessage(userN,getCurrTime(),msg,true)
-        console.log("a")
-        console.log(getCurrTime())
+       
+        
         //emit a msg
         socket.emit("chat-message",msg)
 

@@ -18,7 +18,8 @@ io.on("connection",socket=>{
   
    if(users[userIndex].includes(username))   
    {
-    console.log("true")     
+  
+       
     socket.emit("exist",true);   
     return
 
