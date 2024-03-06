@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const {userName,msg,
                 time}=Msg
             console.log(Msg)
-                
+                console.log(userName,time)
             addMessage(userName,time,msg)
             updateScroll()
         })

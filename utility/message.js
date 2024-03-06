@@ -1,9 +1,12 @@
 const moment =require("moment")
 
-const Message=(userName,msg)=>{
-    return {
-        userName,msg,
-        time:moment().format("h:mm a")
+class Message
+{
+    constructor(userName,msg)
+    {
+        this.userName=userName
+        this.msg=msg
+        this.time=moment().format("h:mm a")
     }
 }
 module.exports=Message

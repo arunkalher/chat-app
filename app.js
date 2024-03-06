@@ -26,9 +26,9 @@ io.on("connection",socket=>{
    users[userIndex].push(username)
     socket.join(room)
         //broadcast
-        socket.broadcast.to(room).emit("message",Message(bot,`${username} has joined the Chat...`))
+        socket.broadcast.to(room).emit("message",new Message(bot,`${username} has joined the Chat...`))
         
-        socket.emit("message",Message(bot,`Welcome ${username} to ${room}...`))
+        socket.emit("message" , new  Message(bot,`Welcome ${username} to ${room}...`))
 
         io.to(room).emit("get-users",users[userIndex])
     
@@ -39,14 +39,14 @@ io.on("connection",socket=>{
     
     // listeing chat messages
     socket.on("chat-message",(msg)=>{
-        socket.broadcast.to(room).emit("message",Message(username,msg))
+        socket.broadcast.to(room).emit("message",new  Message(username,msg))
     })
 
     //runs when client disconnects  
     socket.on("disconnect",()=>{
         users[userIndex]=users[userIndex].filter(user=>user!==username)
         io.to(room).emit("get-users",users[userIndex])
-        io.to(room).emit("message",Message(bot,`${username} has left...`))
+        io.to(room).emit("message",new  Message(bot,`${username} has left...`))
     })
 })  
 
