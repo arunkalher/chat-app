@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const msgText=document.createElement("div")
         msgName.classList.add("msg-name")
         msgText.classList.add("msg-text")
-        msgName.innerText=name+"  :  "+time
+        msgName.innerText=name+"  :  "+getCurrTime()
         msgText.innerText=msg
         message.appendChild(msgName)
         message.appendChild(msgText)
